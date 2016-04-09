@@ -1,0 +1,129 @@
+<extension type="plugin" group="system">
+	<name>PLG_SYSTEM_DBFAVICON</name>
+	<description>PLG_SYSTEM_DBFAVICON_DESC</description>
+	<version>1.0.0</version>
+	<creationDate>05/2016</creationDate>
+	<author>Elisa Sophia Foltyn</author>
+	<authorEmail>elisa@designbengel.de</authorEmail>
+	<authorUrl>http://www.designbengel.de</authorUrl>
+	<license>GNU/GPL version 3 or later; see LICENSE.txt</license>
+	<copyright>Copyright of Elisa Sophia Foltyn</copyright>
+	<files>
+		<filename plugin="dbfavicon">dbfavicon.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_content_dbfavicon.ini</language>
+		<language tag="en-GB">en-GB.plg_content_dbfavicon.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_SYSTEM_DBFAVICON_FIELDSET_BASIC">
+				<field name="md5sum" type="hidden" default=""/>
+
+				<field name="mainimage" type="media" directory="images/dbfavicon"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_MAINIMAGE"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_MAINIMAGE_DESC"/>
+
+				<field name="dbfavicon_enable_basic"
+				       type="radio"
+				       class="btn-group btn-group-yesno"
+				       default="1"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_BASIC"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_BASIC_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="ios" label="PLG_SYSTEM_DBFAVICON_FIELDSET_IOS">
+
+				<field name="dbfavicon_enable_ios"
+				       type="radio"
+				       class="btn-group btn-group-yesno"
+				       default="1"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_IOS"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_IOS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--<field name="colorios" type="color"-->
+				<!--default="#ffffff"-->
+				<!--label="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_IOS"-->
+				<!--description="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_IOS_DESC" />-->
+
+				<!--<field name="iosimage" type="media" directory="images/dbfavicon" label="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_IOS" description="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_IOS_DESC" />-->
+
+
+			</fieldset>
+
+			<fieldset name="android" label="PLG_SYSTEM_DBFAVICON_FIELDSET_ANDROID">
+
+				<field name="dbfavicon_enable_android"
+				       type="radio"
+				       class="btn-group btn-group-yesno"
+				       default="1"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_ANDROID"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_ANDROID_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+
+				<field name="androidappname" type="text" default="My App Title"
+				       label="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_APPNAME"
+				       description="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_APPNAME_DESC" size="10"/>
+
+
+				<field name="androidoptionslink" type="list" default=""
+				       label="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_LINK_SELECT"
+				       description="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_LINK_SELECT_DESC">
+					<option value="">PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_LINK_SELECT_BROWSER</option>
+					<option value="standalone">PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_LINK_SELECT_STANDALONE</option>
+				</field>
+
+				<field name="androidoptionsorientation" type="list" default=""
+				       label="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_ORIENTATION"
+				       description="PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_ORIENTATION_DESC">
+					<option value="">PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_ORIENTATION_AUTO</option>
+					<option value="landscape">PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_ORIENTATION_LANDSCAPE</option>
+					<option value="portrait">PLG_SYSTEM_DBFAVICON_ANDROID_OPTIONS_ORIENTATION_PORTRAIT</option>
+				</field>
+
+
+				<field name="colorandroid" type="color"
+				       default="#ffffff"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_ANDROID_DESC"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_ANDROID"/>
+
+				<!--<field name="androidimage" type="media" directory="images/dbfavicon" label="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_ANDROID" description="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_ANDROID_DESC"/>-->
+
+			</fieldset>
+
+
+			<fieldset name="windows" label="PLG_SYSTEM_DBFAVICON_FIELDSET_WINDOWS">
+
+				<field name="dbfavicon_enable_windows"
+				       type="radio"
+				       class="btn-group btn-group-yesno"
+				       default="1"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_WINDOWS"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_ENABLE_WINDOWS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="colorwindows" type="color"
+				       default="#ffffff"
+				       label="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_WINDOWS"
+				       description="PLG_SYSTEM_DBFAVICON_FIELD_COLOR_WINDOWS_DESC"/>
+
+				<!--<field name="windowsimage" type="media" directory="images/dbfavicon" label="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_WINDOWS" description="PLG_SYSTEM_DBFAVICON_FIELD_IMAGE_WINDOWS_DESC"/>-->
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
