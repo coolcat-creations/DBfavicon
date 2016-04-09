@@ -1,6 +1,6 @@
 # DBfavicon
 
-* This plugin adds different favicons for specific devices <br> and was created at #jhuette as my first plugin project. <br> Special thanks to my mentors Yves Hoppe, Guido de Gobbis and Markus Linne"
+* This plugin adds different favicons for specific devices <br> and was created at #jhuette as my first plugin project. <br> Special thanks to my mentors Yves Hoppe, Guido De Gobbis and Markus Linne"
 
 ### Function
 * Adds favicons in different sizes + possibility to enable disable
@@ -31,6 +31,6 @@
 * Add custom background color to each type
 * Overwrite start-URL for android
 * add support for pinned tabs (safari)
-* ?
+* Testing ;-)
 
 ###

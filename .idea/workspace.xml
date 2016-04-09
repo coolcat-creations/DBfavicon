@@ -4,6 +4,7 @@
     <list default="true" id="8bbaeefe-612c-4869-aeca-9097a70146ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini" />
     </list>
     <ignored path="db_favicon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +30,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="468">
-                <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <first_editor relative-caret-position="372">
+                <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -65,8 +66,8 @@
       <file leaf-file-name="en-GB.plg_system_dbfavicon.sys.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="54">
+              <caret line="3" column="198" selection-start-line="3" selection-start-column="198" selection-end-line="3" selection-end-column="198" />
               <folding />
             </state>
           </provider>
@@ -80,6 +81,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -183,12 +185,12 @@
       <option name="presentableId" value="Default" />
       <updated>1460234432780</updated>
       <workItem from="1460234434190" duration="699000" />
-      <workItem from="1460235166871" duration="1368000" />
+      <workItem from="1460235166871" duration="2087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2067000" />
+    <option name="totallyTimeSpent" value="2786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
@@ -241,22 +243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbfavicon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3814">
@@ -269,11 +255,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.plg_system_dbfavicon.sys.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="198" selection-start-line="3" selection-start-column="198" selection-end-line="3" selection-end-column="198" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="468">
-            <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <first_editor relative-caret-position="372">
+            <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
             <folding />
           </first_editor>
           <second_editor />
