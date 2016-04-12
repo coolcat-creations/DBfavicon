@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @Copyright    (c) Elisa Foltyn - All rights reserved.
  * @package      Plg_System_DBFavicon
@@ -8,11 +7,8 @@
  *
  * @license      GPL v3
  **/
-
 defined('_JEXEC') or die;
 
-
-jimport('joomla.plugin.plugin');
 jimport('joomla.filesystem.file');
 jimport('joomla.filesystem.folder');
 
@@ -23,19 +19,28 @@ jimport('joomla.filesystem.folder');
  */
 class PlgSystemDbfavicon extends JPlugin
 {
+	/**
+	 * Load the language file on instantiation.
+	 *
+	 * @var    boolean
+	 * @since  1.0.0
+	 */
 	protected $autoloadLanguage = true;
 
 	/**
 	 * Base path to favicons
 	 *
 	 * @var    string
+	 * @since   1.0.0
 	 */
-	private $basePath = JPATH_BASE . "/images/favicons/";
+	private $basePath = JPATH_BASE . '/images/favicons/';
 
 	/**
 	 * Check if update of imagefiles is needed
 	 *
 	 * @var    boolean
+	 *
+	 * @since   1.0.0
 	 */
 	private $update = true;
 
@@ -50,10 +55,12 @@ class PlgSystemDbfavicon extends JPlugin
 	 * @throws  Exception
 	 *
 	 * @return  void
+	 *
+	 * @since   1.0.0
 	 */
 	public function onContentBeforeDisplay($context, $row, $params, $page = 0)
 	{
-		$mainImage = $this->params->get('mainimage', '');
+		$mainImage     = $this->params->get('mainimage', '');
 		$mainImagePath = JPATH_BASE . "/" . $mainImage;
 
 		if (empty($mainImage) || !JFile::exists($mainImagePath))
@@ -61,9 +68,9 @@ class PlgSystemDbfavicon extends JPlugin
 			return;
 		}
 
-		if (JFile::getExt($mainImagePath) != "png")
+		if (JFile::getExt($mainImagePath) != 'png')
 		{
-			JFactory::getApplication()->enqueueMessage("PLG_SYSTEM_DBFAVICON_WARNING_IMGTYPE", "warning");
+			JFactory::getApplication()->enqueueMessage(JText::_(PLG_SYSTEM_DBFAVICON_WARNING_IMGTYPE), 'warning');
 
 			return;
 		}
@@ -92,7 +99,7 @@ class PlgSystemDbfavicon extends JPlugin
 		{
 			if ($this->update)
 			{
-				$jimage->createThumbs($thumbSizes, JImage::CROP_RESIZE, JPATH_BASE . "/images/favicons");
+				$jimage->createThumbs($thumbSizes, JImage::CROP_RESIZE, JPATH_BASE . '/images/favicons');
 			}
 
 			$this->generateFaviconlink($thumbSizes, $key, $imgFile);
@@ -112,8 +119,9 @@ class PlgSystemDbfavicon extends JPlugin
 	 * @throws  Exception
 	 *
 	 * @return  array  The different sizes
+	 *
+	 * @since   1.0.0
 	 */
-
 	public function generateSizes()
 	{
 		$sizes = array();
@@ -151,6 +159,8 @@ class PlgSystemDbfavicon extends JPlugin
 	 * @throws  Exception
 	 *
 	 * @return  void
+	 *
+	 * @since   1.0.0
 	 */
 	public function generateFaviconlink($thumbSizes, $key, $imgFile)
 	{
@@ -159,9 +169,10 @@ class PlgSystemDbfavicon extends JPlugin
 		$json = new stdClass;
 		$json->name = JFactory::getApplication()->get("sitename");
 		$json->icons = array();
-		$density = array(0.75, 1, 1.5, 2, 3, 4);
-		$cnt = 0;
-		$msTiles = "";
+
+		$density  = array(0.75, 1, 1.5, 2, 3, 4);
+		$cnt      = 0;
+		$msTiles  = "";
 		$msActive = false;
 
 		foreach ($thumbSizes as $i => $faviconSize)
@@ -202,7 +213,7 @@ class PlgSystemDbfavicon extends JPlugin
 		// Creates a JSON file for android
 		if ($cnt > 0)
 		{
-			$alink = $this->params->get("androidoptionslink", "");
+			$alink   = $this->params->get("androidoptionslink", "");
 			$aorient = $this->params->get("androidoptionsorientation", "");
 
 			if ($alink != "")
@@ -255,10 +266,12 @@ class PlgSystemDbfavicon extends JPlugin
 	 * @param   string  $md5  Md5 hash of the image
 	 *
 	 * @return  void
+	 *
+	 * @since   1.0.0
 	 */
 	public function updateParams($md5)
 	{
-		$this->params->set("md5sum", $md5);
+		$this->params->set('md5sum', $md5);
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true)
 			->update($db->qn('#__extensions'))
