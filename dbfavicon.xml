@@ -1,4 +1,4 @@
-<extension type="plugin" group="system" method="upgrade">
+<extension version="3.5" type="plugin" group="system" method="upgrade">
 	<name>PLG_SYSTEM_DBFAVICON</name>
 	<description>PLG_SYSTEM_DBFAVICON_DESC</description>
 	<version>1.0.0</version>
