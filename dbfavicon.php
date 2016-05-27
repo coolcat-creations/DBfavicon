@@ -45,10 +45,14 @@ class PlgSystemDbfavicon extends JPlugin
 	protected $update = true;
 
 	/**
-	 * PlgSystemDbfavicon constructor.
+	 * Constructor - Initialize basePath
 	 *
-	 * @param object $subject
-	 * @param array  $config
+	 * @param   object  &$subject  The object to observe
+	 * @param   array   $config    An optional associative array of configuration settings.
+	 *                             Recognized key values include 'name', 'group', 'params', 'language'
+	 *                             (this list is not meant to be comprehensive).
+	 *
+	 * @since   1.0.1
 	 */
 	public function __construct(&$subject, $config = array())
 	{
