@@ -33,7 +33,7 @@ class PlgSystemDbfavicon extends JPlugin
 	 * @var    string
 	 * @since   1.0.0
 	 */
-	private $basePath = JPATH_BASE . '/images/favicons/';
+	protected $basePath;
 
 	/**
 	 * Check if update of imagefiles is needed
@@ -42,15 +42,28 @@ class PlgSystemDbfavicon extends JPlugin
 	 *
 	 * @since   1.0.0
 	 */
-	private $update = true;
+	protected $update = true;
+
+	/**
+	 * Constructor - Initialize basePath
+	 *
+	 * @param   object  &$subject  The object to observe
+	 * @param   array   $config    An optional associative array of configuration settings.
+	 *                             Recognized key values include 'name', 'group', 'params', 'language'
+	 *                             (this list is not meant to be comprehensive).
+	 *
+	 * @since   1.0.1
+	 */
+	public function __construct(&$subject, $config = array())
+	{
+		$this->basePath = JPATH_BASE . '/images/favicons/';
+
+		parent::__construct($subject, $config);
+	}
+
 
 	/**
 	 * Main entry point for the plugin
-	 *
-	 * @param   String     $context  The application context
-	 * @param   Object     $row      Dataobject
-	 * @param   JRegistry  $params   The plugin parameters
-	 * @param   int        $page     The pagenumber
 	 *
 	 * @throws  Exception
 	 *
@@ -58,8 +71,15 @@ class PlgSystemDbfavicon extends JPlugin
 	 *
 	 * @since   1.0.0
 	 */
-	public function onContentBeforeDisplay($context, $row, $params, $page = 0)
+	public function onAfterDispatch()
 	{
+		$doc = JFactory::getApplication()->getDocument();
+
+		if (!JFactory::getApplication()->isSite() || $doc->getType() !== 'html')
+		{
+			return;
+		}
+
 		$mainImage     = $this->params->get('mainimage', '');
 		$mainImagePath = JPATH_BASE . "/" . $mainImage;
 
@@ -70,7 +90,7 @@ class PlgSystemDbfavicon extends JPlugin
 
 		if (JFile::getExt($mainImagePath) != 'png')
 		{
-			JFactory::getApplication()->enqueueMessage(JText::_(PLG_SYSTEM_DBFAVICON_WARNING_IMGTYPE), 'warning');
+			JFactory::getApplication()->enqueueMessage(JText::_('PLG_SYSTEM_DBFAVICON_WARNING_IMGTYPE'), 'warning');
 
 			return;
 		}
@@ -122,7 +142,7 @@ class PlgSystemDbfavicon extends JPlugin
 	 *
 	 * @since   1.0.0
 	 */
-	public function generateSizes()
+	protected function generateSizes()
 	{
 		$sizes = array();
 
@@ -162,7 +182,7 @@ class PlgSystemDbfavicon extends JPlugin
 	 *
 	 * @since   1.0.0
 	 */
-	public function generateFaviconlink($thumbSizes, $key, $imgFile)
+	protected function generateFaviconlink($thumbSizes, $key, $imgFile)
 	{
 		// Create json
 		$doc = JFactory::getDocument();
@@ -269,7 +289,7 @@ class PlgSystemDbfavicon extends JPlugin
 	 *
 	 * @since   1.0.0
 	 */
-	public function updateParams($md5)
+	protected function updateParams($md5)
 	{
 		$this->params->set('md5sum', $md5);
 		$db = JFactory::getDbo();
