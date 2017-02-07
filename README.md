@@ -8,13 +8,13 @@
 * Adds android-icons in different sizes
  	+ Link behaviour
  	+ Force screen orientation
- 	+ Customize Color of task bar
+ 	+ Customize Colour of task bar
  	+ generates and adds manifest.json for android
- 	+ Customize Color of task bar
+ 	+ Customize Colour of task bar
  	+ possibility to enable disable
 
 * Adds Windows tiles
-	+ Set up tile color
+	+ Set up tile colour
 	+ Adds browserconfig.xml file to root folder for mstiles
  	+ possibility to enable disable
 
@@ -22,13 +22,13 @@
 
 ### Install
 * Just install through joomla installer and activate the plugin in Extensions > Plugins > DB Favicons
-* Check your template file to avoid double entrys
+* Check your template file to avoid double entries
 
 ### ToDo
 * Add descriptions in backend
 * Add alternate images for each type
 * Add custom margin to each type
-* Add custom background color to each type
+* Add custom background colour to each type
 * Overwrite start-URL for android
 * add support for pinned tabs (safari)
 * Testing ;-)
